@@ -34,6 +34,20 @@ body {
     margin: 0;
 }
 
+a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 section {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,15 +58,116 @@ section h2 {
     font-size: 2.5rem;
 }
 
+.highlight-color-1,
+.highlight-color-1 a:hover {
+    border-color: var(--color1);
+    color: var(--color1);
+}
+.highlight-color-2,
+.highlight-color-2 a:hover {
+    border-color: var(--color2);
+    color: var(--color2);
+}
+.highlight-color-3,
+.highlight-color-3 a:hover {
+    border-color: var(--color3);
+    color: var(--color3);
+}
+.highlight-color-4,
+.highlight-color-4 a:hover {
+    border-color: var(--color4);
+    color: var(--color4);
+}
+.highlight-color-5,
+.highlight-color-5 a:hover {
+    border-color: var(--color5);
+    color: var(--color5);
+}
+.highlight-color-6,
+.highlight-color-6 a:hover {
+    border-color: var(--color6);
+    color: var(--color6);
+}
+.highlight-color-7,
+.highlight-color-7 a:hover {
+    border-color: var(--color7);
+    color: var(--color7);
+}
+.highlight-color-8,
+.highlight-color-8 a:hover {
+    border-color: var(--color8);
+    color: var(--color8);
+}
+.highlight-color-9,
+.highlight-color-9 a:hover {
+    border-color: var(--color9);
+    color: var(--color9);
+}
+.highlight-color-10,
+.highlight-color-10 a:hover {
+    border-color: var(--color10);
+    color: var(--color10);
+}
+
 
 /* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+figure {
+    position: relative;
+    border: 0.625rem solid var(--color1);
+    border-radius: 0.25rem;
+    margin: 0;
+}
 
+figure img {
+    aspect-ratio: 313 / 437;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+}
+
+figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #fff;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 0;
+}
+
+figure figcaption a {
+    font-size: 1.875rem;
+}
+
+li {
+    margin-bottom: 10px;
+}
 
 /* At this breakpoint, transition to 2 figures per line */
 
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 0;
+        row-gap: 10px;
+    }
+
+    li {
+        flex-basis: 49.5%;
+        margin-bottom: 0;
+    }
+}
 
 
 /* At this breakpoint, transition to 3 figures per line */
 
-@media (min-width: 800px) {}
+@media (min-width: 800px) {
+    li {
+        flex-basis: 32.5%;
+    }
+}
